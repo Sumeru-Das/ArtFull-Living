@@ -82,6 +82,16 @@ header.active #bar{
     padding: 4px 5px;
     width: 33px;
 }
+
+.material-symbols-rounded {
+    font-size: 24px;
+    border: none;
+    background-color: #4285F4;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
 @media(max-width: 991px){
     header .navigation{
         display: block;

@@ -4,31 +4,34 @@ function myHeader(){
     window.addEventListener("scroll" , function(){
         if(window.scrollY > 0){
             header.classList.add("active");
-            lol.src = "pic/bulb2.png";
+            lol.src = "pic/logo.png";
         }else{
             header.classList.remove("active");
-            lol.src = "pic/bulb.png";
+            lol.src = "pic/logo.png";
         }
         
     })
 }
 myHeader();
 
-function myBars(){
+function myBars() {
     let bars = document.querySelector("#bar");
     let nav = document.querySelector(".navigation");
-    bars.onclick = function(){
-        if(nav.style.right == "0%"){
+    let profileButton = document.querySelector("#profileButton");
+
+    bars.onclick = function() {
+        if (nav.style.right == "0%") {
             nav.style.right = "-50%";
-            bars.src = "pic/menu.png"
-        }else{
+            bars.src = "pic/menu.png";
+            profileButton.style.position = "relative"; // Reset position
+        } else {
             nav.style.right = "0%";
-            bars.src = "pic/x.png"
+            bars.src = "pic/x.png";
+            profileButton.style.position = "absolute";
+            profileButton.style.top = "0";
         }
-        nav.classList.toggle("new")
+        nav.classList.toggle("new");
     }
-    
-    
 }
 myBars()
 
